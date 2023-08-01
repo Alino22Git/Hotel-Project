@@ -1,0 +1,197 @@
+/*Schriftarten für jede Webseite*/
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------
+Titel der verschiedenen Seiten 
+*/
+h1 {
+
+    font-size: 25px;
+    color: whitesmoke;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 50px;
+}
+/*
+-----------------------------------------------------------------------------------------------------------------
+Buttons
+*/
+
+
+.glow-on-hover {
+    width: 80px;
+    height: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------
+Elemente des Files "index" -> body
+*/
+.index_body h1 {
+    color: whitesmoke;
+    font-size: 75px;
+    font-family: 'Nothing You could do';
+}
+
+
+.index_body h2 {
+    font-size: 15px;
+}
+
+
+.index_body {
+    background-image: url(hotelbild.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/* damit sich bei kleinerem fester die hintergrundschrift(HOTEL) mit der H2 überlappt*/
+@media (max-height: 610px) {
+    .index_body {
+        background-image: url(hotelbild.jpg);
+        background-size: 250%;
+        background-repeat: repeat-y;
+        background-position: left;
+    }
+}
+
+.index_body div {
+    text-align: center;
+    color: whitesmoke;
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------
+Elemente des Files body (Hintergrund ist anders als bei Index)
+*/
+
+body {
+
+    background-image: url(hotelbild.jpg);
+    background-size: 250% 300%;
+    background-repeat: repeat-y;
+
+}
+
+
+/*
+-----------------------------------------------------------------------------------------------------------------
+Eigenschaften vom Anmelde/-Registrierungskasten
+*/
+
+fieldset {
+    background-color: whitesmoke;
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    border-radius: 12px;
+    padding: 20px;
+    padding-top: 35px;
+    border-color: whitesmoke;
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------
+Eigenschaften für die Navigation
+*/
+.navbar {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-bottom: 20px;
+}
+
+fieldset.login {
+    padding-top: 35px;
+    margin-top: 30px !important;
+    margin: auto;
+    width: 400px;
+    text-align: center;
+    float: center;
+    
+}
+
+.beitrag {
+    background-color: whitesmoke;
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    padding: 20px;
+    border-color: whitesmoke;
+}
+
+.newstitle {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: large;
+   
+}
+fieldset {
+    color:#000;
+
+}
